@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Financial Reset Program — $97</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #080808; --dark: #111; --mid: #1a1a1a;
+  --off-white: #f2ede4; --muted: rgba(242,237,228,0.5);
+  --gold: #c8a84b; --gold-dim: rgba(200,168,75,0.12);
+  --border: rgba(255,255,255,0.07);
+  --green: #52b788; --green-dim: rgba(82,183,136,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--off-white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+body::after {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1000; opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.ticker-bar { background: var(--gold); overflow: hidden; padding: 9px 0; white-space: nowrap; }
+.ticker-inner { display: inline-block; animation: tick 24s linear infinite; }
+.ticker-inner span { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: var(--black); padding: 0 28px; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.hero { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 100px 24px 80px; position: relative; overflow: hidden; }
+.hero-glow { position: absolute; width: 900px; height: 900px; background: radial-gradient(ellipse, rgba(200,168,75,0.09) 0%, transparent 65%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; opacity: 0; animation: up 0.7s ease 0.1s forwards; }
+.hero-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px,15vw,150px); line-height: 0.88; opacity: 0; animation: up 0.8s ease 0.25s forwards; }
+.hero-h1 .ital { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--gold); display: block; }
+.hero-sub { font-size: clamp(16px,2.2vw,19px); line-height: 1.75; color: var(--muted); max-width: 560px; margin: 28px auto 0; opacity: 0; animation: up 0.8s ease 0.4s forwards; }
+.hero-sub strong { color: var(--off-white); }
+
+.income-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 36px; opacity: 0; animation: up 0.8s ease 0.55s forwards; }
+.badge { background: var(--mid); border: 1px solid var(--border); padding: 8px 18px; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.05em; }
+.badge.active { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+.hero-price { margin-top: 44px; opacity: 0; animation: up 0.8s ease 0.7s forwards; }
+.hero-price .was { font-size: 13px; color: var(--muted); text-decoration: line-through; }
+.hero-price .amount { font-family: 'Bebas Neue', sans-serif; font-size: 88px; color: var(--gold); line-height: 1; display: block; }
+.hero-price .once { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.btn-gold { display: inline-block; margin-top: 32px; padding: 18px 52px; background: var(--gold); color: var(--black); font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; cursor: pointer; border: none; position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; opacity: 0; animation: up 0.8s ease 0.85s forwards; }
+.btn-gold::before { content: ''; position: absolute; inset: 0; background: #e0bc6a; transform: translateX(-101%); transition: transform 0.3s ease; }
+.btn-gold span { position: relative; z-index: 1; }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 44px rgba(200,168,75,0.3); }
+.btn-gold:hover::before { transform: translateX(0); }
+.hero-note { font-size: 11px; color: var(--muted); margin-top: 14px; letter-spacing: 0.05em; opacity: 0; animation: up 0.7s ease 1s forwards; }
+
+.truth { background: var(--dark); padding: 100px 24px; position: relative; }
+.truth::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+.truth-inner { max-width: 800px; margin: 0 auto; }
+.tag { font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: block; }
+.big-h { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px,7vw,76px); line-height: 0.93; margin-bottom: 36px; }
+.big-h em { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--gold); }
+.truth-body { font-size: 17px; line-height: 1.8; color: var(--muted); max-width: 640px; }
+.truth-body strong { color: var(--off-white); }
+.truth-body p + p { margin-top: 20px; }
+
+.income-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 48px; }
+@media(max-width:700px){ .income-grid { grid-template-columns: 1fr; } }
+.income-card { background: var(--black); padding: 32px 28px; border-top: 2px solid var(--gold); }
+.income-card .ic-amount { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.income-card .ic-title { font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+.income-card .ic-desc { font-size: 13px; line-height: 1.6; color: var(--muted); }
+
+.story { padding: 100px 24px; max-width: 900px; margin: 0 auto; }
+.story-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 40px 0; }
+@media(max-width:600px){ .story-cards, .fit-grid, .deliver-grid { grid-template-columns: 1fr; } }
+.s-card { padding: 36px 32px; background: var(--mid); }
+.s-card.before { border-top: 2px solid #c0392b; }
+.s-card.after { border-top: 2px solid var(--green); }
+.s-card .lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 14px; display: block; }
+.s-card.before .lbl { color: #c0392b; }
+.s-card.after .lbl { color: var(--green); }
+.s-card p { font-size: 15px; line-height: 1.7; color: var(--muted); }
+.s-card p strong { color: var(--off-white); }
+.pullquote { display: block; background: var(--gold-dim); border-left: 3px solid var(--gold); padding: 18px 24px; margin: 32px 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 19px; color: var(--off-white); line-height: 1.6; }
+.story-body { font-size: 17px; line-height: 1.8; color: var(--muted); }
+.story-body strong { color: var(--off-white); }
+.story-body p + p { margin-top: 20px; }
+
+.inside { background: var(--dark); padding: 100px 24px; }
+.inside-inner { max-width: 900px; margin: 0 auto; }
+.modules-list { margin-top: 56px; display: flex; flex-direction: column; gap: 3px; }
+.mod { background: var(--black); display: grid; grid-template-columns: 64px 1fr; overflow: hidden; transition: background 0.15s; }
+.mod:hover { background: #161616; }
+.mod-num { background: var(--gold-dim); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--gold); border-right: 1px solid var(--border); padding: 28px 0; }
+.mod-body { padding: 28px 32px; }
+.mod-body h3 { font-weight: 700; font-size: 16px; color: var(--off-white); margin-bottom: 6px; }
+.mod-body p { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.mod-lessons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.mod-lesson { font-size: 11px; background: var(--mid); padding: 4px 10px; color: rgba(242,237,228,0.4); }
+
+.community { padding: 100px 24px; max-width: 900px; margin: 0 auto; }
+.community-box { background: var(--dark); border: 1px solid rgba(82,183,136,0.2); padding: 56px 48px; position: relative; overflow: hidden; }
+.community-box::before { content: 'SKOOL'; font-family: 'Bebas Neue', sans-serif; font-size: 180px; color: rgba(82,183,136,0.03); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; white-space: nowrap; }
+.community-top { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 36px; }
+.community-icon { font-size: 44px; flex-shrink: 0; }
+.community-top h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px,5vw,48px); line-height: 1; color: var(--green); margin-bottom: 8px; }
+.community-top p { font-size: 15px; line-height: 1.7; color: var(--muted); }
+.community-top p strong { color: var(--off-white); }
+.community-features { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+@media(max-width:600px){ .community-features { grid-template-columns: 1fr; } }
+.cf { background: var(--black); padding: 24px; }
+.cf .cf-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+.cf h4 { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+.cf p { font-size: 12px; line-height: 1.6; color: var(--muted); }
+.community-price { margin-top: 28px; padding: 20px 24px; background: var(--black); border-left: 3px solid var(--green); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.community-price p { font-size: 14px; color: var(--muted); }
+.community-price p strong { color: var(--off-white); }
+.community-price .cp-price { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--green); }
+
+.everything { background: var(--dark); padding: 100px 24px; }
+.everything-inner { max-width: 900px; margin: 0 auto; }
+.deliver-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 56px; }
+.d-card { background: var(--black); padding: 36px 28px; position: relative; overflow: hidden; }
+.d-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, var(--gold), transparent 60%); }
+.d-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+.d-card h3 { font-weight: 700; font-size: 15px; margin-bottom: 8px; }
+.d-card p { font-size: 12px; line-height: 1.65; color: var(--muted); }
+
+.forwho { padding: 100px 24px; max-width: 900px; margin: 0 auto; }
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 48px; }
+.fit-box { padding: 40px 32px; }
+.fit-box.yes { background: var(--gold-dim); border: 1px solid rgba(200,168,75,0.2); }
+.fit-box.no { background: rgba(192,57,43,0.04); border: 1px solid rgba(192,57,43,0.15); }
+.fit-box h3 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.06em; margin-bottom: 24px; }
+.fit-box.yes h3 { color: var(--gold); }
+.fit-box.no h3 { color: #e74c3c; }
+.fit-box ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.fit-box li { font-size: 13px; line-height: 1.6; color: var(--muted); padding-left: 20px; position: relative; }
+.fit-box.yes li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+.fit-box.no li::before { content: '✕'; position: absolute; left: 0; color: #e74c3c; }
+
+.upsell { background: var(--mid); padding: 60px 24px; text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.upsell p { font-size: 14px; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.05em; }
+.upsell h3 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 5vw, 48px); color: var(--off-white); margin-bottom: 16px; }
+.upsell .u-desc { font-size: 15px; color: var(--muted); max-width: 480px; margin: 0 auto 28px; line-height: 1.65; }
+.upsell .u-desc strong { color: var(--off-white); }
+.btn-outline { display: inline-block; padding: 16px 44px; border: 1px solid var(--gold); color: var(--gold); font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s; }
+.btn-outline:hover { background: var(--gold); color: var(--black); }
+
+.final { background: var(--gold); padding: 110px 24px; text-align: center; position: relative; overflow: hidden; }
+.final-bg { position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 240px; color: rgba(0,0,0,0.05); top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; }
+.final h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px,10vw,100px); color: var(--black); line-height: 0.92; position: relative; margin-bottom: 20px; }
+.final .f-sub { font-size: 17px; color: rgba(0,0,0,0.55); max-width: 480px; margin: 0 auto 16px; line-height: 1.65; position: relative; }
+.final .f-includes { font-size: 12px; color: rgba(0,0,0,0.4); margin-bottom: 36px; letter-spacing: 0.05em; position: relative; }
+.btn-dark { display: inline-block; padding: 20px 56px; background: var(--black); color: var(--gold); font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-dark:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+.final-note { margin-top: 18px; font-size: 11px; color: rgba(0,0,0,0.35); letter-spacing: 0.1em; text-transform: uppercase; position: relative; }
+
+footer { background: var(--black); padding: 36px 24px; text-align: center; border-top: 1px solid var(--border); }
+footer p { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242,237,228,0.2); }
+
+@keyframes up { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
+.reveal { opacity:0; transform:translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.in { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span>THE FINANCIAL RESET PROGRAM</span><span>·</span><span>$97 ONE-TIME</span><span>·</span><span>FOR ANYONE WHO EARNS MONEY</span><span>·</span><span>5 MODULES + TEMPLATES</span><span>·</span><span>PRIVATE SKOOL COMMUNITY</span><span>·</span><span>30 DAYS FREE THEN $29/MONTH</span><span>·</span>
+    <span>THE FINANCIAL RESET PROGRAM</span><span>·</span><span>$97 ONE-TIME</span><span>·</span><span>FOR ANYONE WHO EARNS MONEY</span><span>·</span><span>5 MODULES + TEMPLATES</span><span>·</span><span>PRIVATE SKOOL COMMUNITY</span><span>·</span><span>30 DAYS FREE THEN $29/MONTH</span><span>·</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <p class="eyebrow">The System Nobody Taught You</p>
+  <h1 class="hero-h1">The Financial<span class="ital">Reset Program</span></h1>
+  <p class="hero-sub">It doesn't matter how much you make. <strong>If your money has no direction, it disappears.</strong> This program gives you the system, the tools, and the community to finally take control.</p>
+  <div class="income-badges">
+    <div class="badge active">$30K/year</div>
+    <div class="badge active">$50K/year</div>
+    <div class="badge active">$75K/year</div>
+    <div class="badge active">$100K/year</div>
+    <div class="badge active">$150K+/year</div>
+    <div class="badge" style="color:var(--off-white);border-color:var(--border);">All income levels</div>
+  </div>
+  <div class="hero-price">
+    <span class="was">$197</span>
+    <span class="amount">$97</span>
+    <span class="once">One-Time · Lifetime Access</span>
+  </div>
+  <a href="https://buy.stripe.com/cNi8wPdKjbt06JE3Ff5sA01" target="_blank" class="btn-gold"><span>Get Instant Access — $97</span></a>
+  <p class="hero-note">Includes 30 days free in the private community → then $29/month</p>
+</section>
+
+<section class="truth reveal">
+  <div class="truth-inner">
+    <span class="tag">The Hard Truth</span>
+    <h2 class="big-h">It's not about<br>how much you <em>make.</em></h2>
+    <div class="truth-body">
+      <p>People making $30,000 a year feel broke. People making $150,000 a year feel broke. <strong>The income is different. The feeling is identical.</strong></p>
+      <p>Because nobody — not your school, not your parents, not your job — ever sat you down and taught you how money actually works. How to tell it where to go. How to make it stay.</p>
+      <p><strong>That's not a character flaw. That's a gap in your education. And this program closes it.</strong></p>
+    </div>
+    <div class="income-grid">
+      <div class="income-card">
+        <div class="ic-amount">$40K</div>
+        <div class="ic-title">Working hard, always behind</div>
+        <div class="ic-desc">Paycheck comes in. Bills go out. Nothing left. Feels like a math problem with no solution.</div>
+      </div>
+      <div class="income-card">
+        <div class="ic-amount">$80K</div>
+        <div class="ic-title">Good salary, zero savings</div>
+        <div class="ic-desc">Makes more than most people they know. Still can't figure out where it all goes every month.</div>
+      </div>
+      <div class="income-card">
+        <div class="ic-amount">$150K</div>
+        <div class="ic-title">Six figures, six-figure stress</div>
+        <div class="ic-desc">High income, high lifestyle, high anxiety. The number got bigger — the problem didn't go away.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story reveal">
+  <span class="tag">This Is the Plan I Used</span>
+  <h2 class="big-h">From repoed car<br>to <em>paid off.</em><br>In 30 days.</h2>
+  <div class="story-cards">
+    <div class="s-card before">
+      <span class="lbl">Before</span>
+      <p><strong>Car repoed. 4 months behind.</strong> No system. No plan. No idea where the money was going — despite earning enough to cover it.</p>
+    </div>
+    <div class="s-card after">
+      <span class="lbl">After</span>
+      <p><strong>$3K car note paid in full.</strong> Less than 30 days later. Same income. Same bills. Different stewardship.</p>
+    </div>
+  </div>
+  <div class="pullquote">"I sat down with a couple using this same plan. In less than 30 days — they found $1,000 they didn't even know they had."</div>
+  <div class="story-body">
+    <p>The move wasn't magic. I wrote out every expense and every liability — and then put it into action. <strong>Dollar by dollar. Every dollar got a job.</strong></p>
+    <p>That's the whole system. And now it's yours.</p>
+  </div>
+</section>
+
+<section class="inside reveal">
+  <div class="inside-inner">
+    <span class="tag">What's Inside</span>
+    <h2 class="big-h">5 modules.<br><em>Total clarity.</em></h2>
+    <div class="modules-list">
+      <div class="mod"><div class="mod-num">01</div><div class="mod-body"><h3>The Paycheck Cycle Trap</h3><p>Why smart, hardworking people still feel broke — and exactly how to break the cycle for good.</p><div class="mod-lessons"><span class="mod-lesson">Why nobody taught us this</span><span class="mod-lesson">How the trap works</span><span class="mod-lesson">The stewardship shift</span><span class="mod-lesson">My 30-day story</span></div></div></div>
+      <div class="mod"><div class="mod-num">02</div><div class="mod-body"><h3>Zero-Based Budgeting Step by Step</h3><p>The core system. Every dollar gets a job before the month begins — income minus expenses equals zero.</p><div class="mod-lessons"><span class="mod-lesson">What ZBB actually means</span><span class="mod-lesson">List every dollar in</span><span class="mod-lesson">List every dollar out</span><span class="mod-lesson">Assign every dollar a job</span><span class="mod-lesson">Template walkthrough</span></div></div></div>
+      <div class="mod"><div class="mod-num">03</div><div class="mod-body"><h3>Building an Emergency Fund Fast</h3><p>From zero to $1,000. The exact process that helped a couple find $1K in hidden margin in under 30 days.</p><div class="mod-lessons"><span class="mod-lesson">Why $1K first</span><span class="mod-lesson">Finding hidden money</span><span class="mod-lesson">Where to keep it</span><span class="mod-lesson">Progress tracker</span></div></div></div>
+      <div class="mod"><div class="mod-num">04</div><div class="mod-body"><h3>Debt Payoff Strategy</h3><p>Stop making minimum payments forever. Build a prioritized payoff plan that actually gets you out.</p><div class="mod-lessons"><span class="mod-lesson">See your full debt picture</span><span class="mod-lesson">Snowball vs avalanche</span><span class="mod-lesson">How I paid off $3K in 30 days</span><span class="mod-lesson">Payoff order + tracker</span></div></div></div>
+      <div class="mod"><div class="mod-num">05</div><div class="mod-body"><h3>Mindset Shifts Around Money</h3><p>The system only works if your thinking changes with it. The beliefs that keep people broke — and how to replace them.</p><div class="mod-lessons"><span class="mod-lesson">Money is a tool</span><span class="mod-lesson">Breaking the delay trap</span><span class="mod-lesson">Contentment vs complacency</span><span class="mod-lesson">Habits that stick</span><span class="mod-lesson">Your 90-day path forward</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="community reveal">
+  <div class="community-box">
+    <div class="community-top">
+      <div class="community-icon">👥</div>
+      <div>
+        <h2>Private Skool Community</h2>
+        <p>You don't just get a course. You get a <strong>community of people doing the same work</strong> — holding each other accountable, posting wins, and pushing forward together.</p>
+      </div>
+    </div>
+    <div class="community-features">
+      <div class="cf"><span class="cf-icon">🏆</span><h4>Win Sharing</h4><p>Members post their progress. $500 saved. Debt paid off. First budget done. Real results, in real time.</p></div>
+      <div class="cf"><span class="cf-icon">📅</span><h4>Daily Accountability Prompts</h4><p>Every day, a prompt keeps you focused and moving. Five minutes. Big momentum.</p></div>
+      <div class="cf"><span class="cf-icon">🤝</span><h4>People Who Get It</h4><p>No judgment. Everyone in here is on the same journey — from all income levels, all starting points.</p></div>
+      <div class="cf"><span class="cf-icon">📲</span><h4>Direct Access</h4><p>Questions, wins, struggles — post them. This is a community, not a broadcast channel.</p></div>
+    </div>
+    <div class="community-price">
+      <p><strong>30 days free</strong> included with your $97 purchase. Then just $29/month to stay — cancel anytime, no hard feelings.</p>
+      <div class="cp-price">$29/mo after 30 days</div>
+    </div>
+  </div>
+</section>
+
+<section class="everything reveal">
+  <div class="everything-inner">
+    <span class="tag">Everything You Get</span>
+    <h2 class="big-h">All of this<br><em>for $97.</em></h2>
+    <div class="deliver-grid">
+      <div class="d-card"><span class="d-icon">🎬</span><h3>20+ Video Lessons</h3><p>Self-paced. Watch on your phone. Rewatch anytime. Lifetime access — no expiration.</p></div>
+      <div class="d-card"><span class="d-icon">📊</span><h3>Zero-Based Budget Template</h3><p>The exact template used in 1-on-1 sessions. Pre-built, ready to fill with your real numbers.</p></div>
+      <div class="d-card"><span class="d-icon">💰</span><h3>Emergency Fund Tracker</h3><p>Week-by-week progress to your first $1,000. Watch it build.</p></div>
+      <div class="d-card"><span class="d-icon">🧾</span><h3>Debt Payoff Tracker</h3><p>Every debt. Every payment. Your freedom date — right in front of you.</p></div>
+      <div class="d-card"><span class="d-icon">✅</span><h3>30-Day Action Checklist</h3><p>Your first 30 days mapped out step by step. No guessing. Just doing.</p></div>
+      <div class="d-card"><span class="d-icon">👥</span><h3>Private Skool Community</h3><p>30 days free. Then $29/month. Daily prompts, win sharing, people who get it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="forwho reveal">
+  <span class="tag">Is This For You?</span>
+  <h2 class="big-h">Be honest<br><em>with yourself.</em></h2>
+  <div class="fit-grid">
+    <div class="fit-box yes">
+      <h3>✅ This IS For You</h3>
+      <ul>
+        <li>You earn money but it never seems to stay</li>
+        <li>You've never had a real budget that actually worked</li>
+        <li>You want to understand money — not just manage it</li>
+        <li>You're ready to take responsibility and take action</li>
+        <li>You want results, not just information</li>
+        <li>Any income level — this works for everyone</li>
+      </ul>
+    </div>
+    <div class="fit-box no">
+      <h3>✕ This Is NOT For You</h3>
+      <ul>
+        <li>You want a get-rich-quick shortcut</li>
+        <li>You'll watch the videos but won't do the work</li>
+        <li>You're not willing to look at your real numbers</li>
+        <li>You want tips — not a system</li>
+        <li>You don't want to change how you handle money</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="upsell reveal">
+  <p>Want personalized help instead?</p>
+  <h3>Book the 1-on-1 Financial Reset Session</h3>
+  <p class="u-desc">Skip the course and go straight to a <strong>60-minute deep dive</strong> where we build your complete financial plan together — live, personalized, and ready to execute.</p>
+  <a href="https://calendly.com/marshon-fisher23/financial-reset-session" target="_blank" class="btn-outline">Book the Session — $197</a>
+</div>
+
+<section class="final" id="enroll">
+  <div class="final-bg">RESET</div>
+  <h2>Get the<br>Program.</h2>
+  <p class="f-sub">The system that went from a repoed car to paid off in 30 days — now yours for $97.</p>
+  <p class="f-includes">5 modules · 20+ lessons · 4 templates · Private community · Lifetime access</p>
+  <a href="https://buy.stripe.com/cNi8wPdKjbt06JE3Ff5sA01" target="_blank" class="btn-dark">Get Instant Access — $97</a>
+  <p class="final-note">30 days free in community → then $29/month · cancel anytime</p>
+</section>
+
+<footer>
+  <p>The Financial Reset Program &nbsp;·&nbsp; $97 One-Time &nbsp;·&nbsp; Lifetime Access &nbsp;·&nbsp; linktr.ee/marshonfisher</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
